@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block title %}Stories{% endblock %}
+{% block body %}
+  <div class="container pst_blk">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="hd_blk">
+          <h5 class="pull-left">Stories</h5>
+          <a href="new_story" class="pull-right btn btn-default"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="clr">&nbsp;</div>
+        <div id="postlist">
+          {% if story %}
+           <div class="panel">
+                <div class="panel-heading ttl_blk">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <div class="text-left"> 
+                                <h5 class="">{{story.title}}</h5>
+                              </div>  
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="text-right">
+                                  <small>Created By -<em>{{story.createdby}}</em></small>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                   <p class="desc"> {{story.description}}</p>
+                </div>
+                <div class="panel-footer btnlst">
+                    <a href="story/{{story.id}}" class="btn btn-default"><i class="fa fa-eye"></i></a> 
+                    <a href="story/edit/{{story.id}}" class="btn btn-default"><i class="fa fa-edit"></i></a> 
+                    <a href="story/delete/{{story.id}}" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                </div>
+          </div>
+        </div>
+        {% else %}
+          <p>No articles to display</p>
+        {% endif %}   
+      </div>  
+      <div class="col-md-1">
+      </div>
+    </div>
+    <hr/>
+    <a href="/">Go Back</a>  
+  </div>    
+{% endblock %}

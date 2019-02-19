@@ -1,0 +1,8 @@
+body{background: #e6e6e6}
+.pst_blk .hd_blk{background: #c4c4c7;border: 1px solid #e6e6e6;overflow: hidden;padding-top: 10px;}
+.hd_blk h5{margin-left: 10px;}
+.pst_blk{background-color: #fff;margin-top: 20px; padding-top: 15px;padding-bottom: 15px;}
+#postlist .panel { padding: 10px; border: #c2c9d2 1px solid; margin-top:5px;}	
+#postlist .btnlst{border-top: 1px solid #ece4e4; padding-top: 10px;}
+#postlist .ttl_blk{background: aliceblue;padding-left: 8px;padding-top: 9px;}
+#postlist .desc{font-size: 14px;margin-left: 11px; margin-top: 10px;color: #7c7f76;}
